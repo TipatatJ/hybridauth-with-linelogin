@@ -1,5 +1,8 @@
 <?php
 include 'vendor/autoload.php';
+
+//session_start();
+
 use Hybridauth\Hybridauth;
 use Hybridauth\HttpClient;
 $config = [
@@ -19,6 +22,8 @@ try {
     // print_r( $tokens );
     print_r( $userProfile );
     $adapter->disconnect();
+
+    
 }
 catch (\Exception $e) {
     echo $e->getMessage();
